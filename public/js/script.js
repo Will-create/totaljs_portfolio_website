@@ -29,11 +29,13 @@ window.addEventListener('scroll', function () {
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
         }
-    })
+    });
 
 
     /* ================================== Sticky navbar ================================== */
-    header.classList.toggle('sticky', window.scrollY > 100);
+
+
+    header && header.classList.toggle('sticky', window.scrollY > 100);
 
     /* ================================== Remove toggle icon and navbar when click nav bar link (scroll) ================================== */
     icon.classList.remove('ti-times');
@@ -42,7 +44,7 @@ window.addEventListener('scroll', function () {
 
 
     /* ================================== Scroll reveal using scrollrevealjs  ================================== */
-    ScrollReveal({ reset: true, distance: '80px', duration: 2000, delay: 200 })
+    ScrollReveal({ reset: true, distance: '80px', duration: 2000, delay: 200 });
     ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
     ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
     ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
